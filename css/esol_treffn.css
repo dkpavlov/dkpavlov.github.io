@@ -1,0 +1,80 @@
+/* CSS Document */
+
+.esols_image {
+    height: 30px;
+    width: 30px;
+    text-align: left;
+    float: left;
+    background-color: #ffffff;
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+.esols_image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 80%;
+}
+.esols_name{
+	margin-left: 35px;
+    text-shadow: none;
+    font-size: 65%;
+    margin-top: 1px;
+    color: #898989;
+}
+
+#treffn-messages li.host .msg-panel{
+	background: linear-gradient(to bottom, #e6e6eb 30%,#e6e6eb 100%);
+    border-radius: 0px 10px 10px 10px;
+}
+#treffn-messages li.host .msg-panel .message{
+    color: #000000;
+    font-weight: bold;
+}
+#treffn-messages li.host .msg-panel .timestamp{
+	color: #9c9c9d;
+    text-shadow: none !important;
+    font-size: 50%;
+    margin-left: 1%;
+}
+#treffn-messages li.guest .msg-panel{
+    background: linear-gradient(to bottom, #bcdd44 30%,#a7c63c 90%);
+    border-radius: 10px 0px 10px 10px;
+    border: none;
+}
+
+#treffn-messages li.guest .msg-panel .message{
+    color: #ffffff;
+    padding-right: 2%;
+    font-weight: normal;
+}
+
+#treffn-messages li.guest .msg-panel .timestamp{
+    font-size: 50%;
+    color: #eef4d8 !important;
+    text-shadow: none !important;
+    padding-right: 2%;
+}
+.esol_button1	{
+    width: 40px !important;
+    height: 41px !important;
+    background-size: 78% !important;
+    margin-top: 0px!important;
+}
+.glyphicon .glyphicon-upload{
+display: none;
+}
+
+.esol_button {
+	background-color: #ffffff;
+    color: darkgrey;
+    line-height: 20px !important;
+    margin-top: 0px !important;
+}
+ul.chat{
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+div#treffn-messages::-webkit-scrollbar {
+    display: none;
+}

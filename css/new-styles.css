@@ -1,0 +1,405 @@
+.calendar,.message {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+html, body {
+    padding:0;
+    margin:0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+p,input[type=text],.sendBtn {
+    transform:scale(1,1.07); /* W3C */
+    -webkit-transform:scale(1,1.07); /* Safari and Chrome */
+    -moz-transform:scale(1,1.07); /* Firefox */
+    -ms-transform:scale(1,1.07); /* IE 9 */
+    -o-transform:scale(1,1.07); /* Opera */
+    letter-spacing:0.4px;
+}
+.transportButton{
+    cursor: pointer;
+}
+.bicycling{
+    margin-bottom: 9px;
+}
+.map {
+
+}
+.face {
+    height: 78px;
+    width: 78px;
+    border-top-left-radius: 15px;
+    float: left;
+}
+.event {
+    float: left;
+    position: absolute;
+    top: 252px;
+    left: 702px;
+        width: 1px;
+}
+.marker {
+    background-color: #a9cc2b;
+    z-index: 99999;
+    border-radius: 15px;
+    height: 226px;
+}
+.message {
+    float: left;
+    width:99%;
+    margin-top: 6px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: 1%;
+    font-weight: bold;
+}
+.message-title {
+    padding-top: 14px;
+    margin-left: 90px;
+    text-align: left;
+    padding-right: 10px;
+    margin-bottom:0;
+
+}
+.marker_dummie {
+    position: absolute;
+    top: 226px;
+    background-image: url("../image/marker_dummie.png");
+    width: 100%;
+    height: 80px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position-x: 50%;
+}
+.icon_date,.icon_duration{
+    float: left;
+    margin-left: 26px;
+    margin-top: 10px;
+}
+.date,.duration {
+    display: inline;
+    color: #fff;
+    font-weight: bold;
+    float:left;
+    margin-bottom: -2px;
+    margin-top: 2px;
+}
+.message-title {
+
+}
+.icon_duration{
+    float:left;
+    margin-left:0;
+}
+.duration {
+    float:right;
+    margin-right: 26px;
+}
+.white-line {
+    width: 96%;
+    background-color: #fff;
+    height: 1px;
+    float: left;
+    margin-left: 2%;
+}
+.transports {
+    padding: 9.5px;
+}
+.bicycling,.driving,.walking,.transit {
+    padding: 10px 0 5px 0;
+    background-color: #bfd960;
+    border-radius: 10px;
+    float:left;
+    margin-right: 1.3%;
+    margin-top: 7px;
+    width:24%;
+    text-align:center;
+}
+.bicycling p,.driving p,.walking p,.transit p {
+    margin:0;
+    padding:0;
+    color:#fff;
+    z-index: 100;
+}
+.transit,.walking {
+    float:right;
+}
+.driving,.walking{
+    margin-right:0;
+}
+.date-p,.duration-p  {
+       display: inline;
+    line-height: 49px;
+    margin-left: 5px;
+}
+.controls {
+    position: fixed;
+    bottom: 0px;
+    z-index:2;
+}
+#thirdRow {
+    position: fixed;
+    width: 100%;
+    padding: 2px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #a1a19b;
+    z-index: 100;
+    bottom: -1px;
+    box-shadow: -1px 0 3px #555;
+    text-align: center; /*esols_change*/
+}
+#thirdRow input[type=text]
+{
+    color: #000;
+    padding-left: 2%;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.grayBar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 87px;
+    background-color: #ebebeb;
+    border: 1px solid #a1a19b;
+    z-index:1;
+}
+.secondRow {
+
+    width: 750px;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 2%;
+    padding-right: 0;
+}
+.btn {
+    padding: 0;
+    border: none;
+    background: none;
+    outline:none;
+}
+.arrowBtn {
+    background-image: url("../image/arrow_button.png");
+    width: 20%;
+    max-width: 71px;
+    height: 70px;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 2%;
+    cursor: pointer;
+    background-position-y: 7px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.cancelBtn {
+    background-image: url("../image/cancel_button.png");
+    width: 71px;
+    height: 70px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 2%;
+    cursor: pointer;
+}
+.laterBtn {
+    background-image: url("../image/later_button.png");
+    width: 71px;
+    height: 70px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 2.6%;
+    cursor: pointer;
+}
+.backBtn {
+    background-image: url("../image/back_button.png");
+    width: 62%;
+    height: 81px;
+    background-size: 100% 94%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 3%;
+    cursor: pointer;
+    background-position-y: 3px;
+    color:#aece35;
+    font-size:32px;
+    text-align:left;
+    padding-left:11%;
+}
+.messageBar {
+    width: 76%;
+    margin-left: 2%;
+    line-height: 24px;
+    border-radius: 5px;
+    border: 1px solid #c7c7cc;
+    outline: none;
+    vertical-align: middle;
+    background: #fff;
+    color: #c7c7cc;
+    padding-left: 1%;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: left;
+
+}
+.sendBtn {
+    color: #c5c5c5;
+    padding-left: 1%;
+    text-decoration: none;
+    font-size: 24px;
+    vertical-align: middle;
+    font-weight: 600;
+    cursor:pointer;
+    margin-left: 0;
+}
+.esol_button {
+    font-size: 14px !important;
+}
+.centerBtn {
+    background-image: url("../image/center_button.png");
+    width: 71px;
+    height: 72px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder  {
+   color: #c7c7cc;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #c7c7cc; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #c7c7cc; 
+}
+
+:-ms-input-placeholder {  
+   color: #c7c7cc;
+}
+@media (min-width: 750px) {
+    .bicycling,.driving,.walking,.transit {
+        width:110.5px;
+    }
+    .white-line {
+        width: 457px;
+    }
+    .marker_dummie {
+        width:480px;
+    }
+    .message {
+        width:460px;
+    }
+    .marker {
+        width:480px;
+    }
+}
+@media screen and (-webkit-device-pixel-ratio:3), screen and (max-width: 750px) {
+    .controls,#thirdRow,.secondRow,.firstRow {
+        width:100%;
+    }
+    .event {
+        width: 65%;
+    }
+}
+@media (max-width: 650px) {
+    /*.transports{
+        width: 95%;
+    }*/
+    .calendar {
+        float:left;
+        width:100%;
+    }
+    .date {
+        width:52.5%;
+        padding:0;
+    }
+    .icon_date {
+        margin-left: 10px;
+    }
+    .centerBtn,.arrowBtn{
+        background-size: 80%;
+        background-position-y: 8.5px;
+        margin-left: 1%;  
+    }
+    .cancelBtn,.laterBtn{
+        width: 40px;
+        height: 40px;
+        background-position-y: 8.5px;
+        margin-left: 1%;
+    }
+    .centerBtn {
+        margin-left: 85%;
+        height: 65px;
+
+    }
+    .backBtn {
+        height:68.73px;
+        width: 65%;
+        font-size:25px;
+    }
+    .messageBar {
+        width: 66%;
+        margin-left: 1%;
+    }
+}
+@media (max-width: 530px) {
+    .duration,.date {
+        float: left;
+        width: 100%;
+        margin-left: 21%;
+        padding: 0;
+    }
+    .icon_duration {
+        margin-left: 10px;
+    }
+    .marker {
+        height:275px;
+    }
+    .marker_dummie {
+        top:274px;
+    }
+    .secondRow {
+        width: 100%
+    }
+    .centerBtn{
+        background-size: 74%;
+        background-position-y: 7.5px;
+        margin-left: 1%;   
+    }
+    .arrowBtn,.cancelBtn,.laterBtn{
+        width: 46.4px;
+        height: 52.4px;
+        background-position-y: 7.5px;
+        margin-left: -1px;
+    }
+    .centerBtn {
+        height: 65px;
+    }
+    .backBtn {
+        height: 46.4px;
+        width: 59.5%;
+        font-size: 16px;
+        margin-left: -1px;
+        margin-top: 2px;
+    }
+    .messageBar {
+        width: 69%;/*esols _ changes*/
+        margin-left: -1.5%;/*esols _ changes*/
+        line-height: 22px;/*esols _ changes*/
+    }
+    #treffn-buttons {
+        bottom: 27px;
+    }
+}
+
+.enabled {
+    color: #BCDD44;
+}

@@ -1,0 +1,13 @@
+{"title":"Created MB 2","createdAt":"2014-10-24 11:09:40",
+ "host":
+    {"name":"Postman Testuser",
+            "phoneNumberHash":"HFTDYoMi1Ri8JUuZanlZWKbDoBtH9W6yt6BfSnzP8lQ\u003d",
+            "status":"ACTIVE"
+    },
+ "guest":
+    {"phoneNumberHash":"3ocZTh8d9U2OVnXGLNMMiqqQBtPSaB0IemxDR19jARU\u003d",
+     "status":"WEBUSER"
+    },
+ "latitude":42.693611,"longitude":23.335,
+ "status":0,
+ "guestEta":"2014-10-24 11:09:40" }

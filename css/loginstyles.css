@@ -1,0 +1,85 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    background-color:#ebeae6;
+    
+}
+.main-container{
+    padding-bottom: 25px;
+}
+.main-container,.messageBar {
+    color: #878684;
+    line-height: 8px;
+}
+.country-list {
+    text-align: left;
+    font: normal;
+    font-size: medium;
+}
+.logo {
+    margin-top: 100px;
+	margin-bottom: 7%;
+	width:85px;
+}
+.main-container,.messageBar {
+    width:100%;
+    text-align: center;
+}
+.main-container p {
+	font-weight:600;
+	display: inline;
+	line-height: 38px;
+}
+.main-container span {
+    color:#91b509;
+}
+.messageBar {
+    line-height: 40px;
+    border-radius: 10px;
+    border: 2px solid #c5d676;
+    outline: none;
+    vertical-align: middle;
+    margin-top: 10px;
+    padding-left: 0px;
+}
+.main-container input[type=text],.messageBar
+{
+    color: #c7c7cc;
+    text-decoration: none;
+    font-size: 24px;
+	text-align: center;
+}
+.sendBtn {
+    color: #eaf3c4;
+    text-decoration: none;
+    font-size: 24px;
+    vertical-align: middle;
+    font-weight: 100;
+    cursor: pointer;
+    background-color: #c2d965;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 0.8% 0 0.6% 0;
+	outline:none;
+	border:0;
+    line-height: 40px;
+}
+.login {
+    -webkit-box-shadow: 0px 2.5px 0px 0px rgba(128,153,33,1);
+    -moz-box-shadow: 0px 2.5px 0px 0px rgba(128,153,33,1);
+    box-shadow: 0px 2.5px 0px 0px rgba(128,153,33,1);
+}
+.inputs {
+    margin-top:35px;
+}
+@media (max-width: 500px) {
+    html, body {
+        font-size: 28px;
+    }
+    .sendBtn,input {
+        font-size: 20px;
+    }
+    .logo {
+    		width:70px;
+    }
+}

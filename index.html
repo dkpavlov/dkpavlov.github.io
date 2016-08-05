@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="banner-custom-name" content="treffn">
+        <meta name="banner-artist-name" content="treffn GmbH">
+        <meta name="banner-custom-url" content="http://beta.treffn.com/?kid=6Z9KV">
+        <meta name="banner-custom-icon" content="image/app-icon.png">
+        <title>Treffn</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/custom-app-banner.min.css" rel="stylesheet">
+        <link href="css/intlTelInput.css" rel="stylesheet">
+        <link href="css/loginstyles.css" rel="stylesheet">
+        <link href="css/esol_treffn.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="treffn-authentication"></div>
+        <div id="treffn-map"></div>
+        <div id="treffn-popup"></div>
+        <div id="treffn-bottom-bar-ui"></div>
+        <div id="treffn-messages"></div>
+        <div id="thirdRow"></div>
+        <div id="treffn-map-buttons"></div>
+        <div id="treffn-buttons"></div>
+        <!-- 
+
+        <div id="treffn-messages"></div> -->
+        
+        <script src="js/third-party/jquery-1.11.3.min.js"></script>
+        <script src="js/third-party/jquery.cookie.min.js"></script>
+        <script src="js/third-party/underscore.min.js"></script>
+        <script src="js/third-party/backbone.min.js"></script>
+        <script src="js/third-party/moment.min.js"></script>
+        <script src="js/third-party/moment-timezone-with-data-2010-2020.min.js"></script> 
+        <script src="js/third-party/moment-duration-format.js"></script>
+        <script src="js/third-party/intlTelInput.min.js"></script>
+
+        <!-- Google maps with key -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAINi2EfDLTMjFJtuoCzIv3TVdxUvpRplo&sensor=true"></script>
+
+        <script src="js/custom-app-banner.js"></script>
+        <script src="js/treffn.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+
+          $(document).ready(function($) {
+	    Backbone.server_url = "https://tnbep.treffn.com:9443"
+            profile = new Treffn.Profile()
+
+            var authenticationUI = new Treffn.AuthenticationUI({ model: profile,
+                                                                 id: "treffn-authentication-ui",
+                                                                 el: $("#treffn-authentication"), 
+                                                                 initCallback: init})
+            $("#mobile-number").intlTelInput({
+              utilsScript: "js/third-party/utils.js",
+              defaultCountry: "auto",
+              geoIpLookup: function(callback) {
+                $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                  var countryCode = (resp && resp.country) ? resp.country : ""
+                  callback(countryCode)
+                });
+            }})
+            
+            //textAdj()
+          })
+
+          var init = function(){
+            $('head').append('<link href="css/treffn.css" rel="stylesheet">')
+            $('head').append('<link href="css/new-styles.css" rel="stylesheet" type="text/css">')
+            var sync = Backbone.sync
+            
+            Backbone.sync = function(method, model, options) {
+                var url = _.isFunction(model.url) ? model.url() : model.url;
+                if (url) {  // If no url, don't override, let Backbone.sync do its normal fail
+                    options = options || {};
+                    options.url =  Backbone.server_url + decodeURI(url);
+                }
+
+                return sync.call(this, method, model, options);
+
+            }
+            var meeting_id = decodeURI(window.location.hash.replace("#", ""))
+            meeting = new Treffn.Meeting({ id: meeting_id, });
+            messages = new Treffn.ChatMessageCollection(false, {meeting: meeting});
+
+            var buttons = new Treffn.ResponseButtons({ model: meeting,
+                                             messages: messages,
+                                             id: "treffn-buttons",
+                                             el: $("#treffn-buttons") })
+
+            map = new Treffn.GoogleMap({ model: meeting,
+                                         id: "treffn-map",
+                                         el: $("#treffn-map") })
+
+            var messagesUI = new Treffn.MessagingUI({ model: messages,
+                                                      meeting: meeting,
+                                                      id: "treffn-messages",
+                                                      el: $("#treffn-messages") })  
+
+            var bottomBar = new Treffn.BottomBarUI({model: messages,
+                                                    meeting: meeting,
+                                                    messagesUI: messagesUI,
+                                                    id: "thirdRow",
+                                                    el: $("#thirdRow") })
+
+            var mapButtons = new Treffn.MapButtons({ model: meeting,
+                                             id: "treffn-map-buttons",
+                                             el: $("#treffn-map-buttons") })
+            
+          }
+        </script>
+    </body>
+</html>

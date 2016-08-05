@@ -1,0 +1,186 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+#treffn-map {
+    width: 100%;
+    height: 100%;
+}
+
+#treffn-map .gmnoprint {
+    margin-top: 50px !important;
+}
+
+#treffn-banner {
+    width: 100%;
+    height: 45px;
+    background: #FFF url("../image/tnlogo.png") no-repeat center -15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #BBB;
+    text-align: center;
+    color: #9ec60c;
+    z-index: 1000;
+    opacity: 0.9
+}
+
+#treffn-popup {
+    max-width: 480px;
+    min-width: 280px;
+    width: 86%;
+    background: #9ec60c;
+    opacity: .9;
+    border-radius: 10px;
+    position: absolute;
+    top:0; left:0;
+}
+
+#treffn-map-buttons, #treffn-buttons {
+    position: fixed;
+    z-index: 0;
+}
+
+#treffn-buttons {
+    height: 85px;
+    width: 100%;
+    bottom: 52px;
+}
+
+#treffn-map-buttons {
+    bottom: 140px;
+}
+
+#treffn-buttons .buttons {
+    position: relative;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#treffn-buttons .response.confirm, .response.cancel {
+    width: 45%;
+    max-width: 250px;
+    height: 50%;
+    max-height: 60px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 80%;
+    line-height: 1;
+    white-space: normal;
+    text-align: left;
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: 0px 8px;
+    background-size: 45px;
+}
+
+#treffn-buttons .response.call-later, .response.change-message {
+    height: 30%;
+    max-height: 30px;
+    margin: 10px;
+    font-size: 80%;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 25px;
+}
+
+#treffn-buttons button.response {
+    position: absolute;
+}
+
+#treffn-buttons .response.call-later {
+    left: 0; top: 0;  
+    background-image: url(../image/CallLater.png);
+}
+
+#treffn-buttons .response.cancel {
+    left: 0; bottom: 0;  
+    background-image: url(../image/CancelMeeting.png);
+}
+
+#treffn-buttons .response.confirm {
+    right: 0; bottom: 0;  
+    background-image: url(../image/OnMyWay.png);
+}
+
+#treffn-buttons .response.change-message {
+    right: 0; top: 0;  
+    background-image: url(../image/ChangeMessage.png);
+}
+
+#treffn-messages{ 
+   
+    background-color: #ffffff;
+    max-height: 275px;
+    overflow-y: scroll;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    bottom: 46px;
+}
+
+#treffn-messages .messages-input {
+    width: 100%;
+    background: #EEE;
+    box-shadow: -1px 0 3px #555;
+    padding: 2px 0;
+}
+
+
+#treffn-messages .messages-input .btn {
+    margin: 0 3px;
+    vertical-align: baseline;
+}
+
+#treffn-messages ol.messages-list {
+    background: #EEE;
+    margin: 0; padding:0;
+    overflow: auto;
+    max-height: 180px;
+    font-size: 80%;
+    box-shadow: -1px 0 5px #555;
+    list-style: none;
+}
+
+#treffn-messages .msg-panel {
+    max-width: 40%;
+    padding: 3px 5px;
+    margin: 4px 4px;
+    display: inline-block;
+}
+
+#treffn-messages .input-message {
+    display: inline-block;
+    width: 60%;
+}
+
+#treffn-messages .timestamp {
+    font-size: 65%;
+    color: #888;
+    text-shadow: 0 1px 0px #555;
+}
+
+#treffn-messages li.guest {
+    text-align: right;
+}
+
+#treffn-messages li.host {
+    text-align: left;
+}
+
+h1 {
+   margin: 0; padding:0;
+}
+
+.nav .cancel {
+   color: red;
+   font-weight: bold;
+}
